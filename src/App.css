@@ -1,0 +1,447 @@
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  width: min(100% - 48px, 1080px);
+  margin: 0 auto;
+  padding: 60px 0 34px;
+}
+
+.masthead {
+  border-bottom: 1px solid #c9c4b7;
+  padding-bottom: 44px;
+  position: relative;
+}
+
+.masthead::after {
+  content: '';
+  width: 120px;
+  height: 9px;
+  background: #e0a33a;
+  position: absolute;
+  bottom: -5px;
+  right: 5%;
+  transform: rotate(-2deg);
+}
+
+.eyebrow,
+.section-kicker,
+label,
+.year-stamp span,
+footer,
+.holiday-count {
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: 11px;
+}
+
+.eyebrow {
+  color: #b4553d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  background: #b4553d;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+h1 {
+  font-size: clamp(56px, 10vw, 116px);
+  line-height: .84;
+  letter-spacing: -.055em;
+  font-weight: 400;
+  margin: 28px 0 22px;
+  color: #20312d;
+}
+
+h1 em {
+  color: #b4553d;
+  font-style: italic;
+}
+
+.intro {
+  font-size: 19px;
+  color: #66716a;
+  margin: 0;
+}
+
+.control-panel {
+  margin: 34px 0 56px;
+  padding: 23px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  background: #ebe5d8;
+  border: 1px solid #c9c4b7;
+  box-shadow: 5px 5px 0 #d2cabc;
+}
+
+label {
+  display: block;
+  color: #66716a;
+  margin-bottom: 9px;
+}
+
+select {
+  appearance: none;
+  min-width: 290px;
+  border: 0;
+  border-bottom: 2px solid #20312d;
+  border-radius: 0;
+  padding: 8px 32px 8px 0;
+  color: #20312d;
+  background: transparent;
+  cursor: pointer;
+}
+
+.year-stamp {
+  text-align: right;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: #b4553d;
+}
+
+.year-stamp strong {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -.04em;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.section-kicker {
+  color: #b4553d;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -.04em;
+}
+
+.holiday-count {
+  color: #66716a;
+  margin-bottom: 3px;
+}
+
+.holiday-list {
+  border-top: 1px solid #bdb8ab;
+}
+
+.holiday-row {
+  display: grid;
+  grid-template-columns: 92px 1fr auto 30px;
+  align-items: center;
+  gap: 24px;
+  min-height: 108px;
+  border-bottom: 1px solid #bdb8ab;
+}
+
+.date-block {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  color: #b4553d;
+}
+
+.date-number {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.date-month {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.holiday-name h3 {
+  font-size: 23px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+.holiday-name p {
+  color: #66716a;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  margin: 0;
+}
+
+.holiday-name p span {
+  color: #e0a33a;
+  padding: 0 6px;
+}
+
+time {
+  color: #66716a;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.row-index {
+  color: #bdb8ab;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  text-align: right;
+}
+
+.status-message {
+  padding: 30px 0;
+  color: #66716a;
+  border-top: 1px solid #bdb8ab;
+  border-bottom: 1px solid #bdb8ab;
+}
+
+.error-message {
+  color: #b4553d;
+}
+
+footer {
+  border-top: 1px solid #c9c4b7;
+  color: #879089;
+  margin-top: 70px;
+  padding-top: 18px;
+}
+
+footer a {
+  color: #b4553d;
+}
+
+@media (max-width: 640px) {
+  body.A3 .sheet.page-shell {
+    width: calc(100% - 32px);
+    height: auto;
+    min-height: calc(100vh - 32px);
+    margin: 16px auto;
+    padding: 10mm;
+  }
+
+  .page-shell {
+    width: min(100% - 32px, 1080px);
+    padding-top: 34px;
+  }
+
+  .masthead {
+    padding-bottom: 32px;
+  }
+
+  .control-panel {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 22px;
+    margin: 24px 0 40px;
+    padding: 20px;
+  }
+
+  select {
+    min-width: 100%;
+  }
+
+  .year-stamp {
+    justify-content: space-between;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .holiday-row {
+    grid-template-columns: 64px 1fr 20px;
+    gap: 13px;
+    min-height: 94px;
+  }
+
+  .date-block {
+    display: block;
+  }
+
+  .date-number {
+    display: block;
+    font-size: 30px;
+  }
+
+  .holiday-name h3 {
+    font-size: 18px;
+  }
+
+  time {
+    display: none;
+  }
+}
+
+/* The reference is a simple handwritten paper notice. */
+.page-shell {
+  color: #3f3d3b;
+  font-family: 'Comic Sans MS', 'Segoe Print', cursive;
+  background: #fff;
+}
+
+.masthead {
+  border: 0;
+  padding: 0;
+}
+
+.masthead::after,
+.eyebrow,
+.intro {
+  display: none;
+}
+
+h1 {
+  color: #3f3d3b;
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0 0 105px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+h1 em {
+  color: inherit;
+  font-style: normal;
+}
+
+.control-panel {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.control-panel select {
+  appearance: auto;
+  background: #fff;
+  border: 2px solid #3f3d3b;
+  border-radius: 0;
+  color: #3f3d3b;
+  font-size: 25px;
+  min-width: 280px;
+  padding: 8px 15px;
+}
+
+.visually-hidden {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.year-label {
+  color: #777;
+  font-size: 18px;
+  margin-left: 18px;
+}
+
+.holiday-section {
+  margin-left: 38px;
+}
+
+.holiday-list {
+  border: 0;
+}
+
+.holiday-row {
+  align-items: baseline;
+  border: 0;
+  display: flex;
+  gap: 8px;
+  min-height: 0;
+  padding: 0;
+}
+
+.holiday-line {
+  font-size: 27px;
+  line-height: 1;
+}
+
+.holiday-name {
+  align-items: baseline;
+  display: flex;
+  gap: 8px;
+}
+
+.holiday-name time {
+  color: #3f3d3b;
+  font-family: inherit;
+  font-size: 27px;
+}
+
+.holiday-separator {
+  font-size: 27px;
+}
+
+.holiday-name h3 {
+  color: #3f3d3b;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.22;
+  margin: 0;
+}
+
+.row-index,
+footer {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 45px;
+    margin-bottom: 60px;
+    white-space: normal;
+  }
+
+  .control-panel select {
+    font-size: 20px;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .year-label {
+    display: none;
+  }
+
+  .holiday-section {
+    margin-left: 0;
+  }
+
+  .holiday-name {
+    flex-wrap: wrap;
+    gap: 0 7px;
+  }
+
+  .holiday-name time,
+  .holiday-separator,
+  .holiday-name h3 {
+    font-size: 20px;
+  }
+}
