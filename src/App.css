@@ -234,12 +234,16 @@ footer a {
     height: auto;
     min-height: calc(100vh - 32px);
     margin: 16px auto;
-    padding: 10mm;
+    padding: 10mm 10mm 10mm 24mm;
   }
 
   .page-shell {
     width: min(100% - 32px, 1080px);
     padding-top: 34px;
+  }
+
+  .page-shell::before {
+    left: 17mm;
   }
 
   .masthead {
@@ -294,9 +298,23 @@ footer a {
 
 /* The reference is a simple handwritten paper notice. */
 .page-shell {
-  color: #3f3d3b;
+  color: #244f78;
   font-family: 'Comic Sans MS', 'Segoe Print', cursive;
-  background: #fff;
+  background-color: #fffef7;
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent calc(10.5mm - 1px), rgba(95, 151, 193, .34) 10.5mm, rgba(95, 151, 193, .34) calc(10.5mm + 1px));
+  background-repeat: repeat;
+  background-size: 100% 10.5mm;
+  padding-left: 32mm;
+  position: relative;
+}
+
+.page-shell::before {
+  border-left: 2px solid rgba(191, 75, 73, .55);
+  bottom: 0;
+  content: '';
+  left: 24mm;
+  position: absolute;
+  top: 0;
 }
 
 .masthead {
@@ -311,7 +329,7 @@ footer a {
 }
 
 h1 {
-  color: #3f3d3b;
+  color: #244f78;
   font-size: clamp(48px, 7vw, 92px);
   line-height: 1;
   letter-spacing: 0;
@@ -341,10 +359,11 @@ h1 em {
   background: #fff;
   border: 2px solid #3f3d3b;
   border-radius: 0;
-  color: #3f3d3b;
+  color: #244f78;
   font-size: 25px;
   min-width: 280px;
   padding: 8px 15px;
+  box-shadow: 2px 2px 0 rgba(36, 79, 120, .18);
 }
 
 .visually-hidden {
@@ -391,7 +410,7 @@ h1 em {
 }
 
 .holiday-name time {
-  color: #3f3d3b;
+  color: #244f78;
   font-family: inherit;
   font-size: 27px;
 }
@@ -401,10 +420,10 @@ h1 em {
 }
 
 .holiday-name h3 {
-  color: #3f3d3b;
+  color: #244f78;
   font-size: 27px;
   font-weight: 400;
-  line-height: 1.22;
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -443,5 +462,19 @@ footer {
   .holiday-separator,
   .holiday-name h3 {
     font-size: 20px;
+  }
+}
+
+.sheet.page-shell {
+  padding-left: 32mm;
+}
+
+@media (max-width: 640px) {
+  .sheet.page-shell {
+    padding-left: 28mm;
+  }
+
+  .page-shell::before {
+    left: 17mm;
   }
 }
